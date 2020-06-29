@@ -4,6 +4,8 @@ In this challenge you are going to build a full stack application (server & clie
 
 > for now there are data for only 3 cities.
 
+- expected time: 4 - 20 hours
+
 ## live version:
 
 - check this website: https://london-mini-guide-challenge.netlify.app/
@@ -67,13 +69,55 @@ In this challenge you are going to build a full stack application (server & clie
 
 ### server level 100
 
+- make a new express server and deploy it to `repl.it` or `heroku`.
+- on the route `/` respond with the routes you are planing to implement, example:
+
+  ```js
+  {
+      "/pharmcies": "retruns an array of pharmacies in a specific area"
+      ...
+  }
+  ```
+
 ### server level 200
+
+- make your server working for only one city, example: `Stratford`
+- in this level you should have 4 routes:
+
+  |    route    |                result                 |
+  | :---------: | :-----------------------------------: |
+  | /pharmacies | returns pharmacies list for stratford |
+  |  /colleges  |  returns colleges list for stratford  |
+  |  /doctors   |  returns doctors list for stratford   |
+  | /hospitals  | returns hospitals list for stratford  |
 
 ### server level 300
 
+- now make your city dynamic.
+- routes will change:
+
+|       route       |              result               |
+| :---------------: | :-------------------------------: |
+| /:city/pharmacies | returns pharmacies list for :city |
+|  /:city/colleges  |  returns colleges list for :city  |
+|  /:city/doctors   |  returns doctors list for :city   |
+| /:city /hospitals | returns hospitals list for :city  |
+
 ### server level 500
 
+- make all of that in one single route as:
+
+|      route       |              result              |
+| :--------------: | :------------------------------: |
+| /:city/:category | returns :category list for :city |
+
 ### server level 999
+
+- you have the full control over this level.
+- some suggestions:
+  - add new cities.
+  - add routes to add entries to our data.
+  - make sure that you are saving the entered values to the `json` file.
 
 ## client
 
@@ -81,10 +125,33 @@ In this challenge you are going to build a full stack application (server & clie
 
 ### client level 100
 
+- display a title in the center.
+- display the cities dropdown menu.
+- display a categories' buttons.
+- display table with dummy data.
+
 ### client level 200
+
+- make sure that selecting a city will update the state.
+- make sure that clicking on a specific category will activate it (distingush it from ither buttons).
+- show an error if user tried to choose a category before chosing a city
+
+![show an error if user tried to choose a category before chosing a city](https://i.imgur.com/vVPsMUe.png)
 
 ### client level 300
 
+- make fetch request to your server on a specific city.
+- choosing any categorey will display the data specified to thar city in the table.
+- add loading spin while you're fetching your server.
+
 ### client level 500
 
+- make city selection dynamic.
+- selecting a city then selecting a category should displays the data of the selected city in the table.
+
 ### client level 999
+
+- you have the full control over this level.
+- some suggestions:
+  - add a little page contains some data about each city.
+  - form for adding more entries to the data.
