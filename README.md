@@ -1,24 +1,28 @@
-# node-challenge-london-mini-guide
+# Node Challenge - London Mini-Guide
 
-In this challenge you are going to build a full stack application (server & client) shows number of hospitals, doctors, pharmacies and colleges in number of london boroughs.
+In this challenge you are going to build a full stack application (server & client) that shows the number of hospitals, doctors, pharmacies and colleges in some London's boroughs.
 
-> for now there are data for only 3 cities.
+## Time to Complete
 
-- expected time: 4 - 20 hours
+Between 4 and 15 hours
 
-## live version:
+## Live Version
 
-- check this website: https://london-mini-guide-challenge.netlify.app/
-- you don't need to know where the server is actually hosted.
+You can find the website running live here:
 
-## final project screenshot
+https://london-mini-guide-challenge.netlify.app/
+
+You don't need to know where the server is actually hosted.
+
+### Final Project Screenshot
 
 ![project screenshot](https://i.imgur.com/Or1tNpV.png)
 
-## data source
+## Data Source
 
-- the data is provided to you in a folder `./data` which contains 3 files: `Harrow.json`, `Heathrow.json` and `stratford.json`.
-- each file in this format:
+The data is provided to you in a folder `./data` which contains 3 files: `Harrow.json`, `Heathrow.json` and `Stratford.json`.
+
+Each file in this format:
 
   ```js
   {
@@ -60,29 +64,32 @@ In this challenge you are going to build a full stack application (server & clie
   }
   ```
 
-- data source: https://www.yell.com/
-- data has been collected using `web scraping` technique, if you are more curious about this please check [this repo](https://github.com/ahmad-ali14/web-scraping---get-all-businesses-data-in-any-city) or [this youtube video](https://github.com/ahmad-ali14/web-scraping---get-all-businesses-data-in-any-city). and this is completely optional.
+Data source: https://www.yell.com/
 
-## server
+Data has been collected using `web scraping` technique, if you are more curious about this please check [this repo](https://github.com/ahmad-ali14/web-scraping---get-all-businesses-data-in-any-city) or [this youtube video](https://github.com/ahmad-ali14/web-scraping---get-all-businesses-data-in-any-city). and this is completely optional.
 
-- you need to implement your server logic using `node.js`.
+## Server
 
-### server level 100
+You should implement your server logic using `node` and `express`
 
-- make a new express server and deploy it to `repl.it` or `heroku`.
-- on the route `/` respond with the routes you are planing to implement, example:
+### Server Level 100
 
-  ```js
-  {
-      "/pharmcies": "retruns an array of pharmacies in a specific area"
-      ...
-  }
-  ```
+Make a new express server and deploy it to `repl.it` or `heroku`.
 
-### server level 200
+On the route `/` respond with the routes you are planing to implement, example:
 
-- make your server working for only one city, example: `Stratford`
-- in this level you should have 4 routes:
+```js
+{
+    "/pharmcies": "retruns an array of pharmacies in a specific area"
+    ...
+}
+```
+
+### Server Level 200
+
+Make your server working for only one city, example: `Stratford`
+
+In this level you should have 4 routes:
 
   |    route    |                result                 |
   | :---------: | :-----------------------------------: |
@@ -93,8 +100,9 @@ In this challenge you are going to build a full stack application (server & clie
 
 ### server level 300
 
-- now make your city dynamic.
-- routes will change:
+Now make your city dynamic. You should be able to return data based on any city that is passed to the server.
+
+Routes will change:
 
 |       route       |              result               |
 | :---------------: | :-------------------------------: |
@@ -103,55 +111,68 @@ In this challenge you are going to build a full stack application (server & clie
 |  /:city/doctors   |  returns doctors list for :city   |
 | /:city /hospitals | returns hospitals list for :city  |
 
-### server level 500
+### Server Level 500
 
-- make all of that in one single route as:
+Make all of that in one single route as:
 
 |      route       |              result              |
 | :--------------: | :------------------------------: |
 | /:city/:category | returns :category list for :city |
 
-### server level 999
+### Server Level 999
 
-- you have the full control over this level.
-- some suggestions:
-  - add new cities.
-  - add routes to add entries to our data.
-  - make sure that you are saving the entered values to the `json` file.
+You have the full control over this level
 
-## client
+Some suggestions:
 
-- you need to implement your client (or front-end) logic using `react.js`.
+  - Add new cities.
+  - Add routes to add entries to our data.
+  - Make sure that you are saving the entered values to the `json` file.
 
-### client level 100
+## Client
 
-- display a title in the center.
-- display the cities dropdown menu.
-- display a categories' buttons.
-- display table with dummy data.
+- You need to implement your client (or front-end) logic using `react.js`.
 
-### client level 200
+### Client Level 100
 
-- make sure that selecting a city will update the state.
-- make sure that clicking on a specific category will activate it (distingush it from ither buttons).
-- show an error if user tried to choose a category before chosing a city
+In this level should you should
+
+- Display a title in the center.
+- Display the cities dropdown menu.
+- Display a categories' buttons.
+- Display table with dummy data.
+
+### Client Level 200
+
+In this level you should
+
+- Make sure that selecting a city will update the state.
+- Make sure that clicking on a specific category will activate it 
+  - Distingush it from other buttons).
+- Show an error if user tried to choose a category before chosing a city
 
 ![show an error if user tried to choose a category before chosing a city](https://i.imgur.com/vVPsMUe.png)
 
-### client level 300
+### Client Level 300
 
-- make fetch request to your server on a specific city.
-- choosing any categorey will display the data specified to thar city in the table.
-- add loading spin while you're fetching your server.
+In this level you should
 
-### client level 500
+- Make fetch request to your server for a specific city.
+- Choosing any categorey will display the data specified to thar city in the table.
+- Add loading spin while you're fetching your server.
 
-- make city selection dynamic.
-- selecting a city then selecting a category should displays the data of the selected city in the table.
+### Client Level 500
 
-### client level 999
+In this level you should
 
-- you have the full control over this level.
-- some suggestions:
+- Make city selection dynamic.
+- Selecting a city then selecting a category should displays the data of the selected city in the table.
+
+### Client Level 999
+
+You have the full control over this level!
+
+Some suggestions
+
   - add a little page contains some data about each city.
   - form for adding more entries to the data.
