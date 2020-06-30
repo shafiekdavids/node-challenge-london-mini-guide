@@ -98,7 +98,7 @@ In this level you should have 4 routes:
   |  /doctors   |  returns doctors list for stratford   |
   | /hospitals  | returns hospitals list for stratford  |
 
-### server level 300
+### Server Level 300
 
 Now make your city dynamic. You should be able to return data based on any city that is passed to the server.
 
@@ -135,31 +135,33 @@ Some suggestions:
 
 ### Client Level 100
 
-In this level should you should
+In this level you should
 
-- Display a title in the center.
-- Display the cities dropdown menu.
-- Display a categories' buttons.
-- Display table with dummy data.
+- Display a title in the center on the website
+- Display the available cities in a dropdown menu
+- Display the category buttons
+- Display table with fake data
+  - No need to do a fetch at this time
+  - Just make sure it works with the JSON from the Server.
 
 ### Client Level 200
 
 In this level you should
 
-- Make sure that selecting a city will update the state.
+- Make sure that selecting a city will update the state
 - Make sure that clicking on a specific category will activate it 
-  - Distingush it from other buttons).
-- Show an error if user tried to choose a category before chosing a city
+  - The style of the button should also change to distingush it from other buttons
+- Show an error if user tries to choose a category before chosing a city
 
-![show an error if user tried to choose a category before chosing a city](https://i.imgur.com/vVPsMUe.png)
+![show an error if user tries to choose a category before chosing a city](https://i.imgur.com/vVPsMUe.png)
 
 ### Client Level 300
 
 In this level you should
 
 - Make fetch request to your server for a specific city.
-- Choosing any categorey will display the data specified to thar city in the table.
-- Add loading spin while you're fetching your server.
+- Choosing any category will display the data specified to that city in the table.
+- Add loading spinner while you're fetching the data your server.
 
 ### Client Level 500
 
@@ -174,5 +176,5 @@ You have the full control over this level!
 
 Some suggestions
 
-  - add a little page contains some data about each city.
-  - form for adding more entries to the data.
+  - Add a section contains some data about each city.
+  - Add a form for adding more entries to the data.
