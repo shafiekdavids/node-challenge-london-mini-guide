@@ -47,3 +47,5 @@ Some suggestions
 
 - Add a section contains some data about each city.
 - Add a form for adding more entries to the data.
+- redesign the way you represent information.
+- add search and sort functionality.
