@@ -13,10 +13,20 @@ app.get("/", (req, res) => {
   res.send({
     SupportedRoutes: ["/Pharmacies", "/Doctors", "/Colleges", "/Hospitals"],
     Version: "0.0.0.1",
-    Author: "ShafiekDavids",
+    Author: "Shafiek Davids",
   });
 });
 
-app.get();
+//Stratford data
+
+app.get("/:city/pharmacies", function (req, res) {
+  const { city } = req.params.city;
+  console.log(`GET /${req.params.city}/pharmacies`);
+  res.send({ city }.pharmacies);
+});
+
+// app.get("/doctors", (req, res) => res.send(Stratford.doctors));
+// app.get("/colleges", (req, res) => res.send(Stratford.colleges));
+// app.get("/hospitals", (req, res) => res.send(Stratford.hospitals));
 
 app.listen(port, () => console.log(`Your server is running on ${port}}`));
